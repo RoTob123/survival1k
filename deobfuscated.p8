@@ -105,19 +105,20 @@ end
 -- 4 - hp
 -- 5 - iframes
 -- 6 - the sprite to use (used in aggressive enemies only)
-if t % 30 == 0 and rnd(5)\1 == 0 then
-	enemies[#enemies+1] = {0, rnd(300)+10, rnd(300)+10, rnd(3+atk/2)\1, 0, 0} -- passive enemy
-elseif t % 60 == 0 then
+if t % 60 == 0 then
 	-- during night more aggressive enemies will spawn
 	if day then
 		if rnd(15)\1 == 0 then
-			enemies[#enemies+1] = {rnd(atk+1)\1, rnd(300)+10, rnd(300)+10, rnd(5)\1, 0, (rnd(2)\1)+1}
+			enemies[#enemies+1] = {rnd(atk+1)\1, rnd(300)+10, rnd(300)+10, rnd(5+atk)\1, 0, (rnd(2)\1)+1}
 		end
 	else
 		if rnd(10)\1 == 0 then
-			enemies[#enemies+1] = {rnd(atk+2)\1, rnd(300)+10, rnd(300)+10, rnd(5)\1, 0, (rnd(2)\1)+1}
+			enemies[#enemies+1] = {rnd(atk+2)\1, rnd(300)+10, rnd(300)+10, rnd(5+atk)\1, 0, (rnd(2)\1)+1}
 		end
 	end
+end
+if t % 30 == 0 and rnd(5)\1 == 0 then
+	enemies[#enemies+1] = {0, rnd(300)+10, rnd(300)+10, rnd(3+atk/2)\1, 0, 0} -- passive enemy
 end
 
 -- camera, this one's tricky
