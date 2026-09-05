@@ -27,4 +27,6 @@ this is the game where you fight enemies, level up and uhhh.. that's it?
 - submission.p8 - the version i submitted
 - deobfuscated.p8 - the commented, uncompressed version
 
+this was made for pico1k-2026 jam. **#Pico1k** !!
+
 enjoy!
