@@ -126,12 +126,12 @@ end
 if t % 60 == 0 then
 	-- during night more aggressive enemies will spawn
 	if day then
-		if rnd(15)\1 == 0 then
-			enemies[#enemies+1] = {rnd(atk+1)\1, rnd(300)+10, rnd(300)+10, rnd(atk+5)\1, 0, rnd(2)\1+1}
+		if rnd(15-atk)\1 == 0 then
+			enemies[#enemies+1] = {rnd(3)\1+atk, rnd(300)+10, rnd(300)+10, rnd(atk*2)\1+atk, 0, rnd(2)\1+1}
 		end
 	else
-		if rnd(10)\1 == 0 then
-			enemies[#enemies+1] = {rnd(atk+2)\1, rnd(300)+10, rnd(300)+10, rnd(atk+5)\1, 0, rnd(2)\1+1}
+		if rnd(10-atk)\1 == 0 then
+			enemies[#enemies+1] = {rnd(5)\1+atk, rnd(300)+10, rnd(300)+10, rnd(atk*3)\1+atk, 0, rnd(2)\1+1}
 		end
 	end
 end
