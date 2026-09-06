@@ -203,7 +203,7 @@ end
 ?"dmg: "..atk..", time: "..((t\30)%120).."\nhp: "..hp.."\nwater: "..water.."/75\nexp: "..exp.."/"..(atk*100),plr_x-61,plr_y+40,4 -- draw stats
 flip()goto _ -- end the frame by flipping (sound strange but ok)
 ::dead::cls()camera() -- dead subroutine - just displays game over with level reached
-?"you died!\nlevel: "..atk.." ("..atk*100-100+exp..")\nthanks for playing!",5,5,7
+?"you died!\nlevel: "..atk.." ("..atk*100-100+exp..")\nthx for playing!",5,5,7
 flip()goto dead
 
 -- gg man
