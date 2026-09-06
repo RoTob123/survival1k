@@ -1,7 +1,7 @@
 -- survival1k
 -- by rotob123
 
-poke(24412, 255) -- we write 255 to 0x5f5c bc player can hold X and spam attack
+poke(24412, 255) -- we write 255 to 0x5f5c bc player can hold x and spam attack
 
 tiles = {} -- initiate grid of tiles
 pal({10, 11, 12, -15}, 1) -- use custom palette (day)
@@ -35,7 +35,7 @@ for y=0,63 do
 			else
 				tiles[y][x] = seq[2][tiles[y][x-1]][rnd(#seq[2][tiles[y][x-1]])\1+1]
 			end
-		else tiles[y][0] = rnd(3)\1+1 
+		else tiles[y][0] = rnd(3)\1+1
 		end
 	end
 end
@@ -76,6 +76,7 @@ if btnp(4) and tiles[plr_tl_y][plr_tl_x] == 3 then
 	tiles[plr_tl_y][plr_tl_x] = 1 -- dry the tile out, setting it to sand
 	water = min(water+10, 75) -- clamping
 	?"\ai6v2e2d1c1c1" -- sound! :d
+	hp += .1
 end
 
 -- attacking
@@ -188,6 +189,7 @@ for i in all(enemies) do
 		i[2] += cos(dir)
 		if abs(i[2]-plr_x) < 10 and abs(i[3]-plr_y) < 10 and i[5] == 0 then
 			hp -= i[1]
+			?"\ai6v3c1"
 		end
 		if i[5] == 0 then
 			?s[i[6]],i[2]-3,i[3]-3,9
@@ -197,15 +199,10 @@ for i in all(enemies) do
 		end
 	end
 end
-if(hp<=0)then
-?"\as8bagfedc"
-goto dead -- if hp = 0, go to game over screen
-end
+if(hp<=0)goto dead -- if hp = 0, go to game over screen
 ?"웃",plr_x-3,plr_y-2,0 -- draw the player
-?"dmg: "..atk..", time: "..t\30.."\nhp: "..hp.."\nwater: "..water.."/75\nxp: "..exp.."/"..(atk*100),plr_x-61,plr_y+40,4 -- draw stats
+?"dmg: "..atk..", time: "..t\30 .."\nhp: "..hp\1 .."\nwtr: "..water.."/75\nxp: "..exp.."/"..(atk*100),plr_x-61,plr_y+40,4 -- draw stats
 flip()goto _ -- end the frame by flipping (sound strange but ok)
-::dead::cls()camera() -- death subroutine - just displays game over with level reached
-?"u died!\nxp: "..atk*100-100+exp..", time: "..t/30 .."\nthx for playn",5,5,7
-flip()goto dead
+::dead::cls()camera()?"u died!\nxp: "..atk*100-100+exp..", time: "..t/30 .."\nthx for playing",0,0,7-- death subroutine - just displays game over with level reached
 
 -- gg man
