@@ -128,11 +128,11 @@ end
 if t % 60 == 0 then
 	-- during night more aggressive enemies will spawn
 	if day then
-		if rnd(15-atk)\1 == 0 then
+		if rnd(max(15-atk, 0))\1 == 0 then
 			enemies[#enemies+1] = {rnd(3)\1+atk, rnd(300)+10, rnd(300)+10, rnd(atk*2)\1+atk, 0, rnd(2)\1+1}
 		end
 	else
-		if rnd(10-atk)\1 == 0 then
+		if rnd(max(10-atk, 0))\1 == 0 then
 			enemies[#enemies+1] = {rnd(5)\1+atk, rnd(300)+10, rnd(300)+10, rnd(atk*3)\1+atk, 0, rnd(2)\1+1}
 		end
 	end
@@ -202,7 +202,7 @@ if(hp<=0)then
 goto dead -- if hp = 0, go to game over screen
 end
 ?"웃",plr_x-3,plr_y-2,0 -- draw the player
-?"dmg: "..atk..", time: "..((t\30)%120).."\nhp: "..hp.."\nwater: "..water.."/75\nxp: "..exp.."/"..(atk*100),plr_x-61,plr_y+40,4 -- draw stats
+?"dmg: "..atk..", time: "..t\30.."\nhp: "..hp.."\nwater: "..water.."/75\nxp: "..exp.."/"..(atk*100),plr_x-61,plr_y+40,4 -- draw stats
 flip()goto _ -- end the frame by flipping (sound strange but ok)
 ::dead::cls()camera() -- dead subroutine - just displays game over with level reached
 ?"you died!\nxp: "..atk*100-100+exp.."\nthx for playing!",5,5,7
