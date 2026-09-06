@@ -23,7 +23,7 @@ this is the game where you fight enemies, level up and uhhh.. that's it?
 
 **REPO:**
 
-- *(to be made)* archived/ - the previous versions (gonna save only submissions)
+- archived/ - the previous versions (gonna save only submissions)
 - submission.p8 - the version i submitted
 - deobfuscated.p8 - the commented, uncompressed version
 
