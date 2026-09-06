@@ -195,12 +195,12 @@ for i in all(enemies) do
 		end
 	end
 end
-if(hp==0)then
+if(hp<=0)then
 ?"\as8bagfedc"
 goto dead -- if hp = 0, go to game over screen
 end
 ?"웃",plr_x-3,plr_y-2,0 -- draw the player
-?"dmg: "..atk..", time: "..((t\30)%120).."\nhp: "..hp.."\nwater: "..water.."/75\nexp: "..exp.."/"..(atk*100),plr_x-61,plr_y+40,4 -- draw stats
+?"dmg: "..atk..", time: "..((t\30)%120).."\nhp: "..hp.."\nwater: "..water.."/75\nxp: "..exp.."/"..(atk*100),plr_x-61,plr_y+40,4 -- draw stats
 flip()goto _ -- end the frame by flipping (sound strange but ok)
 ::dead::cls()camera() -- dead subroutine - just displays game over with level reached
 ?"you died!\nlevel: "..atk.." ("..atk*100-100+exp..")\nthx for playing!",5,5,7
