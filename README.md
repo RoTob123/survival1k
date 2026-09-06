@@ -18,7 +18,7 @@ this is the game where you fight enemies, level up and uhhh.. that's it?
 
 **TRIVIA:**
 
-- i used shrinko8 to compress the game, originally it was ~1.2k. now its 1019 bytes *( PHEW... )*
+- i used shrinko8 to compress the game, originally it was ~2.2k. now its 1022 bytes *( PHEW... )*
 - you can give ideas on how could i improve the game, perhaps even do less bytes
 - lexaloffle page: [https://www.lexaloffle.com/bbs/?tid=159088]
 
