@@ -204,8 +204,8 @@ end
 ?"웃",plr_x-3,plr_y-2,0 -- draw the player
 ?"dmg: "..atk..", time: "..t\30.."\nhp: "..hp.."\nwater: "..water.."/75\nxp: "..exp.."/"..(atk*100),plr_x-61,plr_y+40,4 -- draw stats
 flip()goto _ -- end the frame by flipping (sound strange but ok)
-::dead::cls()camera() -- dead subroutine - just displays game over with level reached
-?"you died!\nxp: "..atk*100-100+exp.."\nthx for playing!",5,5,7
+::dead::cls()camera() -- death subroutine - just displays game over with level reached
+?"u died!\nxp: "..atk*100-100+exp..", time: "..t/30 .."\nthx for playn",5,5,7
 flip()goto dead
 
 -- gg man
