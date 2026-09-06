@@ -30,3 +30,8 @@ this is the game where you fight enemies, level up and uhhh.. that's it?
 this was made for pico1k-2026 jam. **#Pico1k** !!
 
 enjoy!
+
+**UPDATE LOG:**
+- version 2.0:
+  - added markov's chain map generation
+  - optimized some things, had to delete some too :(
