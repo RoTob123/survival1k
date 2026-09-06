@@ -5,8 +5,8 @@ n+=1a=0end del(h,e)end end end end end t+=1if t%19==0do e=max(e-1,0)if e==0do o-
 else e[5]-=1?"★",e[2]-3,e[3]-3,e[5]%2+8
 end else u=atan2(f-e[2],i-e[3])e[3]+=sin(u)e[2]+=cos(u)if abs(e[2]-f)<10and abs(e[3]-i)<10and e[5]==0do o-=e[1]end if e[5]==0do?p[e[6]],e[2]-3,e[3]-3,9
 else e[5]-=1?p[e[6]],e[2]-3,e[3]-3,e[5]%2+8
-end end end if o==0do?"⁷s8bagfedc"
+end end end if o<=0do?"⁷s8bagfedc"
 goto e end?"웃",f-3,i-2,0
-?"dmg: "..n..", time: "..t\30%120 .."\nhp: "..o.."\nwater: "..e.."/75\nexp: "..a.."/"..n*100,f-61,i+40,4
+?"dmg: "..n..", time: "..t\30%120 .."\nhp: "..o.."\nwater: "..e.."/75\nxp: "..a.."/"..n*100,f-61,i+40,4
 flip()goto n::e::cls()camera()?"you died!\nlevel: "..n.." ("..n*100-100+a..")\nthx for playing!",5,5,7
 flip()goto e
