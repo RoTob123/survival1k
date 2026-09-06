@@ -1,6 +1,8 @@
 -- survival1k
 -- by rotob123
 
+poke(24412, 255) -- we write 255 to 0x5f5c bc player can hold X and spam attack
+
 tiles = {} -- initiate grid of tiles
 pal({10, 11, 12, -15}, 1) -- use custom palette (day)
 
@@ -203,7 +205,7 @@ end
 ?"dmg: "..atk..", time: "..((t\30)%120).."\nhp: "..hp.."\nwater: "..water.."/75\nxp: "..exp.."/"..(atk*100),plr_x-61,plr_y+40,4 -- draw stats
 flip()goto _ -- end the frame by flipping (sound strange but ok)
 ::dead::cls()camera() -- dead subroutine - just displays game over with level reached
-?"you died!\nlevel: "..atk.." ("..atk*100-100+exp..")\nthx for playing!",5,5,7
+?"you died!\nxp: "..atk*100-100+exp.."\nthx for playing!",5,5,7
 flip()goto dead
 
 -- gg man
