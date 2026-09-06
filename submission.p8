@@ -8,5 +8,5 @@ else e[5]-=1?p[e[6]],e[2]-3,e[3]-3,e[5]%2+8
 end end end if o<=0do?"⁷s8bagfedc"
 goto e end?"웃",f-3,i-2,0
 ?"dmg: "..n..", time: "..t\30 .."\nhp: "..o.."\nwtr: "..e.."/75\nxp: "..a.."/"..n*100,f-61,i+40,4
-flip()goto n::e::cls()camera()?"u died!\nxp: "..n*100-100+a.."\nthx for playing!",5,5,7
+flip()goto n::e::cls()camera()?"u died!\nxp: "..n*100-100+a..", time: "..t/30 .."\nthx for playn",5,5,7
 flip()goto e
