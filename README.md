@@ -19,7 +19,8 @@ this is the game where you fight enemies, level up and uhhh.. that's it?
 **TRIVIA:**
 
 - i used shrinko8 to compress the game, originally it was ~1.2k. now its 1019 bytes *( PHEW... )*
-- im going to make a github repo with deobfuscated rom so you could give ideas on how could i improve the game
+- you can give ideas on how could i improve the game, perhaps even do less bytes
+- lexaloffle page: [https://www.lexaloffle.com/bbs/?tid=159088]
 
 **REPO:**
 
